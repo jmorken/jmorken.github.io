@@ -7,9 +7,10 @@
   <body>
     page1<br>
     <br>
+    <hr width="100%" size="2"><br>
     <br>
-    Permutation table for x binary variables has 2^x permutations, ie
-    00,01,10,11.<br>
+    Permutation table for x=2 binary variables has 2^x=2^2=4
+    permutations, ie 00,01,10,11.<br>
     <br>
     <table width="231" cellspacing="2" cellpadding="2" border="1"
       height="127">
@@ -57,11 +58,39 @@
       </tbody>
     </table>
     <br>
+    Proportions:<br>
     <br>
-    Permutation table for x prime divisors has maximum 2^x permutations,
-    ie <br>
-    for two prime divisors (2 and 3) of 00,10,01,10,00,11 gives
-    00,10,01,11.<br>
+    For the range 1 to 4 for n:<br>
+    00 occurs 1/4 of the time<br>
+    01 occurs 1/4 of the time<br>
+    10 occurs 1/4 of the time<br>
+    11 occurs 1/4 of the time<br>
+    <br>
+    These proportions sum to 1, corresponding to all natural numbers.<br>
+    <br>
+    1/4+1/4+1/4+1/4=1.&nbsp; <br>
+    <br>
+    Sequences:<br>
+    <br>
+    The n values where these permutations occur give the four sequences:
+    (only first 7 values shown)<br>
+    <br>
+    00: n: {1, 5, 9, 13, 17, 21, 25}<br>
+    01: n: {2, 6, 10, 14, 18, 22, 26}<br>
+    10: n: {3, 7, 11, 15, 19, 23, 27}<br>
+    11: n: {4, 8, 12, 16, 20, 24, 28}<br>
+    <br>
+    The difference sequences of the above:<br>
+    00: Differences[n]: {4, 4, 4, 4, 4, 4}<br>
+    01: Differences[n]: {4, 4, 4, 4, 4, 4}<br>
+    10: Differences[n]: {4, 4, 4, 4, 4, 4}<br>
+    11: Differences[n]: {4, 4, 4, 4, 4, 4}<br>
+    <br>
+    <hr width="100%" size="2"><br>
+    Permutation table for x=2 prime divisors has maximum 2^x=2^2=4
+    distinct permutations, ie <br>
+    for two prime divisors (2 and 3) of 00,10,01,10,00,11 gives the
+    distinct permutations 00,10,01,11.<br>
     <br>
     <table width="231" cellspacing="2" cellpadding="2" border="1"
       height="127">
@@ -125,8 +154,44 @@
       </tbody>
     </table>
     <br>
+    Proportions:<br>
     <br>
+    For the range 1 to 6 for n:<br>
+    00 occurs 1/3 of the time<br>
+    10 occurs 1/3 of the time<br>
+    01 occurs 1/6 of the time<br>
+    11 occurs 1/6 of the time.<br>
     <br>
+    These proportions sum to 1, corresponding to all natural numbers.<br>
+    <br>
+    1/3+1/3+1/3+1/6=1.&nbsp; <br>
+    <br>
+    Sequences:<br>
+    <br>
+    The n values where these permutations occur give the four sequences:
+    (only first 20 values shown)<br>
+    <br>
+    00: n: {1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47,
+    49, 53, 55, 59}<br>
+    10: n: {2, 4, 8, 10, 14, 16, 20, 22, 26, 28, 32, 34, 38, 40, 44, 46,
+    50, 52, 56, 58}<br>
+    01: n: {3, 9, 15, 21, 27, 33, 39, 45, 51, 57, 63, 69, 75, 81, 87,
+    93, 99, 105, 111, 117}<br>
+    11: n: {6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90,
+    96, 102, 108, 114, 120}<br>
+    <br>
+    The difference sequences of the above:<br>
+    <br>
+    00: Differences[n]: {4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2,
+    4, 2, 4}<br>
+    10: Differences[n]: {2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4,
+    2, 4, 2}<br>
+    01: Differences[n]: {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+    6, 6, 6}<br>
+    11: Differences[n]: {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+    6, 6, 6}<br>
+    <br>
+    <hr width="100%" size="2"><br>
     <br>
     <br>
     <br>
