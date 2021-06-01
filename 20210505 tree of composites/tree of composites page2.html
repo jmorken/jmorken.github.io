@@ -479,75 +479,298 @@
     <br>
     Proportions:<br>
     <br>
+    Table E: Proportions of n values that each permutation occurs<br>
+    <table width="349" cellspacing="2" cellpadding="2" border="1"
+      height="284">
+      <tbody>
+        <tr>
+          <td valign="top">n<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">proportion<br>
+          </td>
+          <td valign="top">reduced proportion<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">8/30<br>
+          </td>
+          <td valign="top">4/15<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">8/30<br>
+          </td>
+          <td valign="top">4/15<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">4/30<br>
+          </td>
+          <td valign="top">2/15<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">4/30<br>
+          </td>
+          <td valign="top">2/15<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">2/30<br>
+          </td>
+          <td valign="top">1/15<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">2/30<br>
+          </td>
+          <td valign="top">1/15<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1/30<br>
+          </td>
+          <td valign="top">1/30<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1/30<br>
+          </td>
+          <td valign="top">1/30<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
     For the range 1 to 30 for n:<br>
     <br>
-    (sort the below by the first occurrences and not in a binary
-    pattern)<br>
-    <br>
-    000 occurs 1/ of the time, so 1/ of numbers don't have any of prime
-    factors 2 or 3 or 5.<br>
-    001 occurs 1/ of the time, so 1/ of numbers have prime factor 2 and
-    not 3.<br>
-    010 occurs 1/ of the time, so 1/ of numbers have prime factor 3 and
-    not 2.<br>
-    011 occurs 1/ of the time.&nbsp; So 1/ of numbers have both prime
-    factors 2 and 3.<br>
-    100 occurs 1/ of the time, so 1/ of numbers don't have either prime
-    factor 2 or 3.<br>
-    101 occurs 1/ of the time, so 1/ of numbers have prime factor 2 and
-    not 3.<br>
-    110 occurs 1/ of the time, so 1/ of numbers have prime factor 3 and
-    not 2.<br>
-    111 occurs 1/30 of the time.&nbsp; So 1/ of numbers have all prime
-    factors 2 and 3 and 5.<br>
+    000 occurs 8/30=4/15 of the time, so 4/15 of numbers don't have any
+    of prime factors 2 or 3 or 5.<br>
+    100 occurs 8/30=4/15 of the time, so 4/15 of numbers have prime
+    factor 2 and don't have either of prime factors 3 or 5.<br>
+    010 occurs 4/30=2/15 of the time, so 2/15 of numbers have prime
+    factor 3 and don't have either of prime factors 2 or 5.<br>
+    110 occurs 4/30=2/15 of the time, so 2/15 of numbers have prime
+    factor 2 and 3 and don't have prime factors 5.<br>
+    001 occurs 2/30=1/15 of the time, so 1/15 of numbers have prime
+    factor 5 and don't have either of prime factors 2 or 3.<br>
+    101 occurs 2/30=1/15 of the time, so 1/15 of numbers have prime
+    factor 2 and 5 and don't have prime factors 3.<br>
+    011 occurs 1/30 of the time.&nbsp; So 1/30 of numbers have prime
+    factor 3 and 5 and don't have prime factors 2.<br>
+    111 occurs 1/30 of the time.&nbsp; So 1/30 of numbers have prime
+    factor 2 and 3 and 5.<br>
     <br>
     These proportions sum to 1, corresponding to all natural numbers.<br>
     <br>
-    1/+1/+1/+1/+1/+1/+1/+1/=1.&nbsp; <br>
+    4/15+4/15+2/15+2/15+1/15+1/15+1/30+1/30=1.&nbsp; <br>
     <br>
     Sequences:<br>
     <br>
-    The n values where these permutations occur give the four sequences:
-    (only first 20 values shown)<br>
+    The n values where these permutations occur give the eight
+    sequences: (only first 20 values shown)<br>
     <br>
-    000: n: {}<br>
-    001: n: {}<br>
-    010: n: {}<br>
-    011: n: {}<br>
-    100: n: {}<br>
-    101: n: {}<br>
-    110: n: {}<br>
-    111: n: {}<br>
+    000: n: {1, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 49, 53,
+    59, 61, 67, 71, 73}<br>
+    100: n: {2, 4, 8, 14, 16, 22, 26, 28, 32, 34, 38, 44, 46, 52, 56,
+    58, 62, 64, 68, 74}<br>
+    010: n: {3, 9, 21, 27, 33, 39, 51, 57, 63, 69, 81, 87, 93, 99, 111,
+    117, 123, 129, 141, 147}<br>
+    110: n: {6, 12, 18, 24, 36, 42, 48, 54, 66, 72, 78, 84, 96, 102,
+    108, 114, 126, 132, 138, 144}<br>
+    001: n: {5, 25, 35, 55, 65, 85, 95, 115, 125, 145, 155, 175, 185,
+    205, 215, 235, 245, 265, 275, 295}<br>
+    101: n: {10, 20, 40, 50, 70, 80, 100, 110, 130, 140, 160, 170, 190,
+    200, 220, 230, 250, 260, 280, 290}<br>
+    011: n: {15, 45, 75, 105, 135, 165, 195, 225, 255, 285, 315, 345,
+    375, 405, 435, 465, 495, 525, 555, 585}<br>
+    111: n: {30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360,
+    390, 420, 450, 480, 510, 540, 570, 600}<br>
+    <br>
+    First three values in each sequence: <br>
+    {{1, 7, 11}, {2, 4, 8}, {3, 9, 21}, {6, 12, 18}, {5, 25, 35}, {10,
+    20, 40}, {15, 45, 75}, {30, 60, 90}}<br>
     <br>
     Difference Sequences:<br>
     <br>
     The difference sequences of the above:<br>
     <br>
-    000: Differences1[n]: {}<br>
-    001: Differences1[n]: {}<br>
-    010: Differences1[n]: {}<br>
-    011: Differences1[n]: {}<br>
-    100: Differences1[n]: {}<br>
-    101: Differences1[n]: {}<br>
-    110: Differences1[n]: {}<br>
-    111: Differences1[n]: {}<br>
+    First differences sequences:<br>
+    <br>
+    000: Differences1[n]: {6, 4, 2, 4, 2, 4, 6, 2, 6, 4, 2, 4, 2, 4, 6,
+    2, 6, 4, 2}<br>
+    100: Differences1[n]: {2, 4, 6, 2, 6, 4, 2, 4, 2, 4, 6, 2, 6, 4, 2,
+    4, 2, 4, 6}<br>
+    010: Differences1[n]: {6, 12, 6, 6, 6, 12, 6, 6, 6, 12, 6, 6, 6, 12,
+    6, 6, 6, 12, 6}<br>
+    110: Differences1[n]: {6, 6, 6, 12, 6, 6, 6, 12, 6, 6, 6, 12, 6, 6,
+    6, 12, 6, 6, 6}<br>
+    001: Differences1[n]: {20, 10, 20, 10, 20, 10, 20, 10, 20, 10, 20,
+    10, 20, 10, 20, 10, 20, 10, 20}<br>
+    101: Differences1[n]: {10, 20, 10, 20, 10, 20, 10, 20, 10, 20, 10,
+    20, 10, 20, 10, 20, 10, 20, 10}<br>
+    011: Differences1[n]: {30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+    30, 30, 30, 30, 30, 30, 30, 30}<br>
+    111: Differences1[n]: {30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+    30, 30, 30, 30, 30, 30, 30, 30}<br>
+    <br>
+    Second differences sequences:<br>
+    <br>
+    000: Abs[Differences2[n]]: {2, 2, 2, 2, 2, 2, 4, 4, 2, 2, 2, 2, 2,
+    2, 4, 4, 2, 2}<br>
+    100: Abs[Differences2[n]]: {2, 2, 4, 4, 2, 2, 2, 2, 2, 2, 4, 4, 2,
+    2, 2, 2, 2, 2}<br>
+    110: Abs[Differences2[n]]: {0, 0, 6, 6, 0, 0, 6, 6, 0, 0, 6, 6, 0,
+    0, 6, 6, 0, 0}<br>
+    010: Abs[Differences2[n]]: {6, 6, 0, 0, 6, 6, 0, 0, 6, 6, 0, 0, 6,
+    6, 0, 0, 6, 6}<br>
+    001: Abs[Differences2[n]]: {10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+    10, 10, 10, 10, 10, 10, 10, 10}<br>
+    101: Abs[Differences2[n]]: {10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+    10, 10, 10, 10, 10, 10, 10, 10}<br>
+    <br>
+    Third differences sequences:<br>
+    <br>
+    000: Abs[Differences3[n]]: {0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0,
+    2, 0, 2, 0}<br>
+    100: Abs[Differences3[n]]: {0, 2, 0, 2, 0, 0, 0, 0, 0, 2, 0, 2, 0,
+    0, 0, 0, 0}<br>
+    110: Abs[Differences3[n]]: {0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0,
+    6, 0, 6, 0}<br>
+    010: Abs[Differences3[n]]: {0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0,
+    6, 0, 6, 0}<br>
+    <br>
+    Fourth differences sequences:<br>
+    <br>
+    000: Abs[Differences4[n]]: {0, 0, 0, 0, 2, 2, 2, 2, 0, 0, 0, 0, 2,
+    2, 2, 2}<br>
+    100: Abs[Differences4[n]]: {2, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 2, 0,
+    0, 0, 0}<br>
+    110: Abs[Differences4[n]]: {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+    6, 6, 6}<br>
+    010: Abs[Differences4[n]]: {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+    6, 6, 6}<br>
+    <br>
+    Fifth differences sequences:<br>
+    <br>
+    000: Abs[Differences5[n]]: {0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 2, 0,
+    0, 0}<br>
+    100: Abs[Differences5[n]]: {0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 2, 0,
+    0, 0}<br>
+    <br>
+    Sixth differences sequences:<br>
+    <br>
+    000: Abs[Differences6[n]]: {0, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 2, 0,
+    0}<br>
+    100: Abs[Differences6[n]]: {0, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 2, 0,
+    0}<br>
+    <br>
+    Seventh differences sequences:<br>
+    <br>
+    000: Abs[Differences7[n]]: {0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0}<br>
+    100: Abs[Differences7[n]]: {0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0}<br>
+    <br>
+    Eighth differences sequences:<br>
+    <br>
+    000: Abs[Differences8[n]]: {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}<br>
+    100: Abs[Differences8[n]]: {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}<br>
     <br>
     The count of how many difference sequences are required to give a
     sequence of all the same absolute value numbers:<br>
-    Ie xyz difference sequences are required for 000:<br>
-    000: n: {}<br>
-    000: Differences1[n]: {}<br>
-    000: Abs[Differences2[n]]: {}<br>
-    000: Abs[Differences3[n]]: {}<br>
+    Ie 4 difference sequences are required for 010:<br>
+    010: n: {3, 9, 21, 27, 33, 39, 51, 57, 63, 69, 81, 87, 93, 99, 111,
+    117, 123, 129, 141, 147}<br>
+    010: Differences1[n]: {6, 12, 6, 6, 6, 12, 6, 6, 6, 12, 6, 6, 6, 12,
+    6, 6, 6, 12, 6}<br>
+    010: Abs[Differences2[n]]: {6, 6, 0, 0, 6, 6, 0, 0, 6, 6, 0, 0, 6,
+    6, 0, 0, 6, 6}<br>
+    010: Abs[Differences3[n]]: {0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0,
+    6, 0, 6, 0}<br>
+    010: Abs[Differences4[n]]: {6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+    6, 6, 6}<br>
     <br>
-    000: a<br>
-    001: b<br>
-    010: c<br>
-    011: d<br>
-    100: e<br>
-    101: f<br>
-    110: g<br>
-    111: h<br>
+    Relate these difference sequence counts to the proportions for each
+    sequence, also check the actual difference values at each difference
+    level, ie 2,6,10,30 for difference levels 8,4,2,1?<br>
+    <br>
+    000: 8<br>
+    100: 8<br>
+    010: 4<br>
+    110: 4<br>
+    001: 2<br>
+    101: 2<br>
+    011: 1<br>
+    111: 1<br>
     <br>
     Related Mathematica code:<br>
     <br>
