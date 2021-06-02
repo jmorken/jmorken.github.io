@@ -1,14 +1,158 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Mathematica functions</title>
   </head>
   <body>
     Mathematica functions:<br>
     <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
     positionDuplicates[list_] := GatherBy[Range@Length[list], list[[#]]
     &amp;]<br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    IntegerPower[k_, b_] := If[IntegerQ[#], # - 1, Floor[#]]
+    &amp;@Rationalize[Log[b, k]];<br>
+(*https://mathematica.stackexchange.com/questions/203992/highest-power-of-x-of-a-number-k-that-is-less-than-n/203994#203994*)<br>
+    (*<br>
+    IntegerPower[345, 7] (* Outputs 3 *)<br>
+    IntegerPower[0.0028, 7] (* Outputs -4 *)<br>
+    IntegerPower[100, 2] (* Outputs 6 *)<br>
+    IntegerPower[0.5, 2] (* Outputs -2 *)<br>
+    *)<br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    Primorial[n_] := Times @@ Prime[Range[n]]<br>
+    (*Primorial[5]*)<br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    gpf[1] := 1<br>
+    gpf[n_Integer?Positive] := FactorInteger[n][[-1, 1]];<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+(*https://mathematica.stackexchange.com/questions/65708/how-do-i-find-\<br>
+    the-position-of-the-maximum-value-in-each-column-of-a-table*)<br>
+    (*function to find the position(s) of max values in columns of a \<br>
+    table, also other code on that same stackexchange page*)<br>
+    maxValuePositions[list_] := <br>
+    &nbsp;Join @@ MapIndexed[Thread[{First /@ Position[#, Max@#],
+    First@#2}] &amp;,<br>
+    &nbsp;&nbsp;&nbsp; Transpose[list]]<br>
+    &nbsp;&nbsp;&nbsp; (*used in A319148*)<br>
+    &nbsp;&nbsp;&nbsp; <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   </body>
 </html>
