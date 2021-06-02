@@ -635,6 +635,14 @@
     <br>
     4/15+4/15+2/15+2/15+1/15+1/15+1/30+1/30=1.&nbsp; <br>
     <br>
+    There are 4 distinct proportions.<br>
+    <br>
+    {4/15, 2/15, 1/15, 1/30}<br>
+    <br>
+    Each of the 4 proportions corresponds to 2 distinct prime factor
+    permutations each, ie 4/15 corresponds to the {0,0,0} and {1,0,0}
+    prime factor permutations.<br>
+    <br>
     Sequences:<br>
     <br>
     The n values where these permutations occur give the eight
@@ -762,17 +770,178 @@
     Relate these difference sequence counts to the proportions for each
     sequence, also check the actual difference values at each difference
     level, ie 2,6,10,30 for difference levels 8,4,2,1?<br>
+    In this case, the differences sequences count is equal to the
+    numerator of the proportion in table F.<br>
     <br>
-    000: 8<br>
-    100: 8<br>
-    010: 4<br>
-    110: 4<br>
-    001: 2<br>
-    101: 2<br>
-    011: 1<br>
-    111: 1<br>
+    Table F: Table E with differences sequences count column added<br>
+    <table width="349" cellspacing="2" cellpadding="2" border="1"
+      height="284">
+      <tbody>
+        <tr>
+          <td valign="top">n<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">proportion<br>
+          </td>
+          <td valign="top">reduced proportion<br>
+          </td>
+          <td valign="top">differences sequences count<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">8/30<br>
+          </td>
+          <td valign="top">4/15<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">8/30<br>
+          </td>
+          <td valign="top">4/15<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">4/30<br>
+          </td>
+          <td valign="top">2/15<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">4/30<br>
+          </td>
+          <td valign="top">2/15<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">2/30<br>
+          </td>
+          <td valign="top">1/15<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">2/30<br>
+          </td>
+          <td valign="top">1/15<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">0<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1/30<br>
+          </td>
+          <td valign="top">1/30<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1/30<br>
+          </td>
+          <td valign="top">1/30<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    Add:<br>
+    <br>
+    1. equivalent sequences using numerators and tuples etc<br>
+    2. A309497 related transformed sequences, with example for
+    constraint solver etc<br>
+    3. add info on sequence 1, 1, 2, 4, 8, 16, 26, 50, 88, 176, 352,
+    576, 824, 1248, 2040, 4080, 8160, 16320, 21728, 34480, 53520, 69648,
+    111808, 223616, 326464 (distinct proportions)<br>
+    4. simplified fractions with equivalent values (ie for larger
+    permutation patterns)<br>
+    5. add two more pages, ie for 2,3,5,7 and 2,3,5,7,11 (don't add the
+    full 210 and 2310 tables, just the distinct 16 and 26 row tables)<br>
     <br>
     Related Mathematica code:<br>
+    <br>
+    add code for tuples, and other code to generate sequences etc
+    snippets<br>
     <br>
     (link to related code from here)<br>
     <br>
