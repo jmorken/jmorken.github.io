@@ -7,7 +7,9 @@
   <body>
     page3<br>
     <br>
-    Permutations with four variables:<br>
+    Permutations with four variables: (<a moz-do-not-send="true"
+href="tree%20of%20composites%20page3%20mathematica%20code%20(simplify%20later).txt">mathematica
+      code link1, simplify this code</a>)<br>
     <br>
     <hr width="100%" size="2"><br>
     Permutation table C for x=4 binary variables has 2^x=2^4=16
@@ -251,6 +253,7 @@
 
 
 
+
     <br>
     <br>
     Sequences:<br>
@@ -298,6 +301,7 @@
     distinct permutations, ie <br>
     for four prime divisors (2, 3, 5, 7) the divisibility pattern
     0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111
+
 
 
 
@@ -3281,7 +3285,9 @@
     Ie. The repeating pattern length of 0000 and 1000 is 48 given by the
     numerator of the proportion 48/210.<br>
     <br>
-    Difference sequences offsets:<br>
+    Difference sequences offsets: (<a moz-do-not-send="true"
+href="tree%20of%20composites%20page3%20difference%20sequences%20offsets%20mathematica%20code.txt">mathematica
+      code for this, clean up this code</a>)<br>
     <br>
     Ie: 0000 is the same sequence as 1000, with a 48/2=24 offset.&nbsp;
     <br>
@@ -3685,7 +3691,9 @@
     1-&gt;2, 2-&gt;6, 3-&gt;6, 5-&gt;2. (check these counts of
     occurrences more)<br>
     <br>
-    Pairwise difference sequences:<br>
+    Pairwise difference sequences: (<a moz-do-not-send="true"
+href="tree%20of%20composites%20page3%20pairwise%20difference%20sequences%20mathematica%20code.txt">mathematica
+      code link for pairwise differences</a>)<br>
     <br>
     Ie: take differences of two sequences with the same proportions:<br>
     a0000 = {1, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
@@ -3703,22 +3711,133 @@
     patterns etc.<br>
     <br>
     show pairwise difference sequences for the first 20 values here:<br>
-    0000: Differences1[n]: {}<br>
-    1000: Differences1[n]: {}<br>
-    0100: Differences1[n]: {}<br>
-    1100: Differences1[n]: {}<br>
-    0010: Differences1[n]: {}<br>
-    1010: Differences1[n]: {}<br>
-    0001: Differences1[n]: {}<br>
-    1001: Differences1[n]: {}<br>
-    0110: Differences1[n]: {}<br>
-    1110: Differences1[n]: {}<br>
-    0101: Differences1[n]: {}<br>
-    1101: Differences1[n]: {}<br>
-    0011: Differences1[n]: {}<br>
-    1011: Differences1[n]: {}<br>
-    0111: Differences1[n]: {}<br>
-    1111: Differences1[n]: {}<br>
+    0000-1000: Differences1[n]: {1, 7, 5, 1, 3, 3, 3, 3, 1, 3, 3, 5, 5,
+    3, 3, 1, 3, 3, 3, 3}<br>
+    0100-1100: Differences1[n]: {3, 3, 9, 9, 3, 3, 3, 3, 9, 9, 3, 3, 3,
+    3, 9, 9, 3, 3, 3, 3}<br>
+    0010-1010: Differences1[n]: {5, 5, 15, 15, 5, 5, 5, 5, 15, 15, 5, 5,
+    5, 5, 15, 15, 5, 5, 5, 5}<br>
+    0001-1001: Differences1[n]: {7, 21, 21, 7, 7, 21, 21, 7, 7, 21, 21,
+    7, 7, 21, 21, 7, 7, 21, 21, 7}<br>
+    0110-1110: Differences1[n]: {15, 15, 15, 15, 15, 15, 15, 15, 15, 15,
+    15, 15, 15, 15, 15, 15, 15, 15, 15, 15}<br>
+    0101-1101: Differences1[n]: {21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+    21, 21, 21, 21, 21, 21, 21, 21, 21, 21}<br>
+    0011-1011: Differences1[n]: {35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+    35, 35, 35, 35, 35, 35, 35, 35, 35, 35}<br>
+    0111-1111: Differences1[n]: {105, 105, 105, 105, 105, 105, 105, 105,
+    105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105}<br>
+    <br>
+    Table G: Pairwise differences table<br>
+    <table width="617" cellspacing="2" cellpadding="2" border="1"
+      height="300">
+      <tbody>
+        <tr>
+          <td valign="top">n<br>
+          </td>
+          <td valign="top">pairwise differences<br>
+          </td>
+          <td valign="top">tally<br>
+          </td>
+          <td valign="top">distinct terms</td>
+          <td valign="top">distinct terms counts </td>
+        </tr>
+        <tr>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">0000-1000<br>
+          </td>
+          <td valign="top">{1, 4}, {3, 12}, {5, 3}, {7, 1}</td>
+          <td valign="top">1, 3, 5, 7 </td>
+          <td valign="top">4<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">0100-1100<br>
+          </td>
+          <td valign="top">{3, 14}, {9, 6}<br>
+          </td>
+          <td valign="top">3, 9<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">0010-1010<br>
+          </td>
+          <td valign="top">{5, 14}, {15, 6}<br>
+          </td>
+          <td valign="top">5, 15<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">0001-1001<br>
+          </td>
+          <td valign="top">{7, 10}, {21, 10}<br>
+          </td>
+          <td valign="top">7, 21<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">0110-1110<br>
+          </td>
+          <td valign="top">{15, 20}<br>
+          </td>
+          <td valign="top">15<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top">0101-1101<br>
+          </td>
+          <td valign="top">{21, 20}<br>
+          </td>
+          <td valign="top">21<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">0011-1011<br>
+          </td>
+          <td valign="top">{35, 20}<br>
+          </td>
+          <td valign="top">35<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">0111-1111<br>
+          </td>
+          <td valign="top">{105, 20}<br>
+          </td>
+          <td valign="top">105<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <br>
     <br>
     <br>
