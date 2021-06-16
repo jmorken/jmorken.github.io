@@ -69,65 +69,53 @@
     with 8/30 proportion, or 4/15 reduced proportion.<br>
     <br>
     The first 8 values of the sequence:<br>
-    {1, 7, 11, 13, 17, 19, 23, 29}<br>
+    n={1, 7, 11, 13, 17, 19, 23, 29}<br>
     <br>
     Taking the reduced proportion 4/15 and creating a list of (4/15)*k
     for 1&lt;=k&lt;=8 gives the list:<br>
-    {4/15,8/15,4/5,16/15,4/3,8/5,28/15,32/15} (I think I maybe made an
-    error when making this sequence of fractions, ie maybe meant to make
-    A335260 related sequence instead)<br>
+    a4={4/15,8/15,4/5,16/15,4/3,8/5,28/15,32/15}<br>
     <br>
     Taking the reduced proportion denominator 15 and creating a list of
     15*k for 1&lt;=k&lt;=8 gives the list:<br>
-    {15,30,45,60,75,90,105,120}<br>
+    b={15,30,45,60,75,90,105,120}<br>
     <br>
     Taking the reduced proportion numerator 4 and creating a list of 4*k
     for 1&lt;=k&lt;=8 gives the list:<br>
-    {4,8,12,16,20,24,28,32} (this is unused so far)<br>
+    c={4,8,12,16,20,24,28,32} (this is unused so far)<br>
     <br>
     Taking the reduced proportion numerator 4 and n={1, 7, 11, 13, 17,
     19, 23, 29} sequence and creating a list of 4*n[k] for 1&lt;=k&lt;=8
     gives the list:<br>
-    {4*1,4*7,4*11,4*13,4*17,4*19,4*23,4*29}<br>
-    {4,28,44,52,68,76,92,116}<br>
+    d={4*1,4*7,4*11,4*13,4*17,4*19,4*23,4*29}<br>
+    d={4,28,44,52,68,76,92,116}<br>
     <br>
     Taking the pairwise differences of the two lists:<br>
-    {15,30,45,60,75,90,105,120}<br>
-    {4,28,44,52,68,76,92,116}<br>
+    b={15,30,45,60,75,90,105,120}<br>
+    d={4,28,44,52,68,76,92,116}<br>
     Gives the sequence:<br>
-    {11,2,1,8,7,14,13,4} (oeis A309497)<br>
+    e={11,2,1,8,7,14,13,4} (oeis A309497)<br>
     <br>
-    Dividing the sequence {11,2,1,8,7,14,13,4} by
-    {4/15,8/15,4/5,16/15,4/3,8/5,28/15,32/15} gives<br>
-    {165/4,15/4,5/4,15/2,21/4,35/4,195/28,15/8} (interesting sequence
-    similar or equivalent to {11,2,1,8,7,14,13,4} but in a fraction
-    form)<br>
-    The sum of this sequence is: 4289/56<br>
-    The average of this sequence is: 4289/448<br>
+    Dividing the sequence e={11,2,1,8,7,14,13,4} by
+    a1={4/15,2/15,4/45,1/15,4/75,2/45,4/105,1/30} gives
+    f1={165/4,15,45/4,120,525/4,315,1365/4,120}<br>
+    Dividing the sequence e={11,2,1,8,7,14,13,4} by
+    a2={15/4,15/2,45/4,15,75/4,45/2,105/4,30} gives
+    f2={44/15,4/15,4/45,8/15,28/75,28/45,52/105,2/15}<br>
+    Dividing the sequence e={11,2,1,8,7,14,13,4} by
+    a3={15/4,15/8,5/4,15/6,3/4,5/8,15/28,15/32} gives
+    f3={44/15,16/15,4/5,128/15,28/3,112/5,364/15,128/15}<br>
+    Dividing the sequence e={11,2,1,8,7,14,13,4} by
+    a4={4/15,8/15,4/5,16/15,4/3,8/5,28/15,32/15} gives
+    f4={165/4,15/4,5/4,15/2,21/4,35/4,195/28,15/8} <br>
+    (interesting sequence similar or equivalent to {11,2,1,8,7,14,13,4}
+    but in a fraction form)<br>
     <br>
-    (**possible fix or addition to above**)<br>
-    (*this line may be incorrect:
-    {4/15,8/15,4/5,16/15,4/3,8/5,28/15,32/15} *)<br>
-    two new sequences from A335260 and A335261:<br>
-    {4/15,2/15,4/45,1/15,4/75,2/45,4/105,1/30}<br>
-    {15/4,15/2,45/4,15,75/4,45/2,105/4,30}<br>
-    Dividing the sequence {11,2,1,8,7,14,13,4} by
-    {4/15,2/15,4/45,1/15,4/75,2/45,4/105,1/30} gives
-    {165/4,15,45/4,120,525/4,315,1365/4,120}<br>
-    The sum of this sequence is: 1095<br>
-    The average of this sequence is: 1095/8<br>
-    Dividing the sequence {11,2,1,8,7,14,13,4} by
-    {15/4,15/2,45/4,15,75/4,45/2,105/4,30} gives
-    {44/15,4/15,4/45,8/15,28/75,28/45,52/105,2/15}<br>
-    The sum of this sequence is: 8578/1575<br>
-    The average of this sequence is: 4289/6300<br>
-    (**end of possible fix or addition to above**)<br>
-    <br>
-    Taking Mod[{15,30,45,60,75,90,105,120}, {1,7,11,13,17,19,23,29}]
-    gives the sequence {0,2,1,8,7,14,13,4} which is similar to the
-    sequence {11,2,1,8,7,14,13,4}<br>
-    {0,2,1,8,7,14,13,4} total is 49, and the mean is 49/8<br>
-    <br>
+    Taking Mod[b={15,30,45,60,75,90,105,120}, n={1,7,11,13,17,19,23,29}]
+    gives the sequence l={0,2,1,8,7,14,13,4} which is similar to the
+    sequence e={11,2,1,8,7,14,13,4}<br>
+    Taking Quotient[b={15,30,45,60,75,90,105,120},
+    n={1,7,11,13,17,19,23,29}] gives the sequence o={15,4,4,4,4,4,4,4}
+    which only has p1 and p2 as values<br>
     <br>
     Transforms in table form for sequence: 000: n: {1, 7, 11, 13, 17,
     19, 23, 29} with proportion 8/30 and reduced proportion 4/15.<br>
@@ -135,7 +123,7 @@
       height="541">
       <tbody>
         <tr>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">proportion 8/30=4/15<br>
           </td>
           <td valign="top">k<br>
           </td>
@@ -143,33 +131,56 @@
           </td>
           <td valign="top">diff[n]<br>
           </td>
-          <td valign="top">a=(4/15)*k<br>
+          <td valign="top" bgcolor="#ccffff">a1=p5/k<br>
           </td>
-          <td valign="top">b=15*k<br>
+          <td valign="top" bgcolor="#ccffff">a2=p6*k<br>
           </td>
-          <td valign="top">c=4*k<br>
+          <td valign="top" bgcolor="#ccffff">a3=p6/k<br>
           </td>
-          <td valign="top">d=4*n[k]</td>
-          <td valign="top">e=b-d=A309497</td>
+          <td valign="top" bgcolor="#ccffff">a4=p5*k<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">a5=N[a1]<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">a6=D[a1]<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">a7=N[a3]<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">a8=D[a3]<br>
+          </td>
+          <td valign="top">b=p2*k<br>
+          </td>
+          <td valign="top">c=p1*k<br>
+          </td>
+          <td valign="top">d=p1*n[k]</td>
+          <td valign="top">e=b-d</td>
           <td valign="top">diff[e]<br>
           </td>
           <td valign="top">Abs[diff[e]]<br>
           </td>
-          <td valign="top">f=e/a</td>
-          <td valign="top">g=A335261/A335260<br>
+          <td valign="top" bgcolor="#ccffff">f1=e/a1<br>
           </td>
-          <td valign="top">h=A335260/A335261</td>
-          <td valign="top">i=e/g<br>
+          <td valign="top" bgcolor="#ccffff">f2=e/a2<br>
           </td>
-          <td valign="top">j=e/h<br>
+          <td valign="top" bgcolor="#ccffff">f3=e/a3<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">f4=e/a4</td>
+          <td valign="top">g (empty)<br>
+          </td>
+          <td valign="top">h (empty)<br>
+          </td>
+          <td valign="top">i (empty)<br>
+          </td>
+          <td valign="top">j (empty)<br>
           </td>
           <td valign="top">l=Mod[b,n]<br>
           </td>
           <td valign="top">m=e-l<br>
           </td>
+          <td valign="top">o=Quotient[b,n]<br>
+          </td>
         </tr>
         <tr>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">p1=4<br>
           </td>
           <td valign="top">1<br>
           </td>
@@ -177,7 +188,21 @@
           </td>
           <td valign="top">6<br>
           </td>
-          <td valign="top">4/15</td>
+          <td valign="top" bgcolor="#ccffff">4/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">4/15</td>
+          <td valign="top" bgcolor="#ccffff">4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">4<br>
+          </td>
           <td valign="top">15</td>
           <td valign="top">4</td>
           <td valign="top">4</td>
@@ -187,18 +212,30 @@
           </td>
           <td valign="top">9<br>
           </td>
-          <td valign="top">165/4</td>
-          <td valign="top">4/15</td>
-          <td valign="top">15/4</td>
-          <td valign="top">165/4</td>
-          <td valign="top">44/15</td>
+          <td valign="top" bgcolor="#ccffff">165/4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">44/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">44/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">165/4</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
           <td valign="top">0<br>
           </td>
           <td valign="top">11<br>
           </td>
+          <td valign="top">15<br>
+          </td>
         </tr>
         <tr>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">p2=15<br>
           </td>
           <td valign="top">2<br>
           </td>
@@ -206,7 +243,21 @@
           </td>
           <td valign="top">4<br>
           </td>
-          <td valign="top">8/15</td>
+          <td valign="top" bgcolor="#ccffff">2/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/2<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/15</td>
+          <td valign="top" bgcolor="#ccffff">2<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8<br>
+          </td>
           <td valign="top">30<br>
           </td>
           <td valign="top">8<br>
@@ -219,23 +270,31 @@
           </td>
           <td valign="top">1<br>
           </td>
-          <td valign="top">15/4<br>
+          <td valign="top" bgcolor="#ccffff">15<br>
           </td>
-          <td valign="top">2/15<br>
+          <td valign="top" bgcolor="#ccffff">4/15<br>
           </td>
-          <td valign="top">15/2<br>
+          <td valign="top" bgcolor="#ccffff">16/15<br>
           </td>
-          <td valign="top">15<br>
+          <td valign="top" bgcolor="#ccffff">15/4<br>
           </td>
-          <td valign="top">4/15<br>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
           </td>
           <td valign="top">2<br>
           </td>
           <td valign="top">0<br>
           </td>
+          <td valign="top">4<br>
+          </td>
         </tr>
         <tr>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">p3=8<br>
           </td>
           <td valign="top">3<br>
           </td>
@@ -243,7 +302,21 @@
           </td>
           <td valign="top">2<br>
           </td>
-          <td valign="top">4/5<br>
+          <td valign="top" bgcolor="#ccffff">4/45<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">45/4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">5/4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">4/5<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">45<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">5<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">4<br>
           </td>
           <td valign="top">45<br>
           </td>
@@ -257,23 +330,31 @@
           </td>
           <td valign="top">7<br>
           </td>
-          <td valign="top">5/4<br>
+          <td valign="top" bgcolor="#ccffff">45/4<br>
           </td>
-          <td valign="top">4/45<br>
+          <td valign="top" bgcolor="#ccffff">4/45<br>
           </td>
-          <td valign="top">45/4<br>
+          <td valign="top" bgcolor="#ccffff">4/5<br>
           </td>
-          <td valign="top">45/4<br>
+          <td valign="top" bgcolor="#ccffff">5/4<br>
           </td>
-          <td valign="top">4/45<br>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
           </td>
           <td valign="top">1<br>
           </td>
           <td valign="top">0<br>
           </td>
+          <td valign="top">4<br>
+          </td>
         </tr>
         <tr>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">p4=30<br>
           </td>
           <td valign="top">4<br>
           </td>
@@ -281,7 +362,21 @@
           </td>
           <td valign="top">4<br>
           </td>
-          <td valign="top">16/15<br>
+          <td valign="top" bgcolor="#ccffff">1/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/6<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">16/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">1<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">6<br>
           </td>
           <td valign="top">60<br>
           </td>
@@ -295,23 +390,31 @@
           </td>
           <td valign="top">1<br>
           </td>
-          <td valign="top">15/2<br>
+          <td valign="top" bgcolor="#ccffff">120<br>
           </td>
-          <td valign="top">1/15<br>
+          <td valign="top" bgcolor="#ccffff">8/15<br>
           </td>
-          <td valign="top">15<br>
+          <td valign="top" bgcolor="#ccffff">128/15<br>
           </td>
-          <td valign="top">120<br>
+          <td valign="top" bgcolor="#ccffff">15/2<br>
           </td>
-          <td valign="top">8/15<br>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
           </td>
           <td valign="top">8<br>
           </td>
           <td valign="top">0<br>
           </td>
+          <td valign="top">4<br>
+          </td>
         </tr>
         <tr>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">p5=4/15<br>
           </td>
           <td valign="top">5<br>
           </td>
@@ -319,7 +422,21 @@
           </td>
           <td valign="top">2<br>
           </td>
-          <td valign="top">4/3<br>
+          <td valign="top" bgcolor="#ccffff">4/75<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">75/4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">3/4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">4/3<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">75<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">3<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">4<br>
           </td>
           <td valign="top">75<br>
           </td>
@@ -333,23 +450,31 @@
           </td>
           <td valign="top">7<br>
           </td>
-          <td valign="top">21/4<br>
+          <td valign="top" bgcolor="#ccffff">525/4<br>
           </td>
-          <td valign="top">4/75<br>
+          <td valign="top" bgcolor="#ccffff">28/75<br>
           </td>
-          <td valign="top">75/4<br>
+          <td valign="top" bgcolor="#ccffff">28/3<br>
           </td>
-          <td valign="top">525/4<br>
+          <td valign="top" bgcolor="#ccffff">21/4<br>
           </td>
-          <td valign="top">28/75<br>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
           </td>
           <td valign="top">7<br>
           </td>
           <td valign="top">0<br>
           </td>
+          <td valign="top">4<br>
+          </td>
         </tr>
         <tr>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">p6=15/4<br>
           </td>
           <td valign="top">6<br>
           </td>
@@ -357,7 +482,21 @@
           </td>
           <td valign="top">4<br>
           </td>
-          <td valign="top">8/5<br>
+          <td valign="top" bgcolor="#ccffff">2/45<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">45/2<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">5/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/5<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">2<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">45<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">5<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8<br>
           </td>
           <td valign="top">90<br>
           </td>
@@ -371,23 +510,31 @@
           </td>
           <td valign="top">1<br>
           </td>
-          <td valign="top">35/4<br>
+          <td valign="top" bgcolor="#ccffff">315<br>
           </td>
-          <td valign="top">2/45<br>
+          <td valign="top" bgcolor="#ccffff">28/45<br>
           </td>
-          <td valign="top">45/2<br>
+          <td valign="top" bgcolor="#ccffff">112/5<br>
           </td>
-          <td valign="top">315<br>
+          <td valign="top" bgcolor="#ccffff">35/4<br>
           </td>
-          <td valign="top">28/45<br>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
           </td>
           <td valign="top">14<br>
           </td>
           <td valign="top">0<br>
           </td>
+          <td valign="top">4<br>
+          </td>
         </tr>
         <tr>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">p7=8/30<br>
           </td>
           <td valign="top">7<br>
           </td>
@@ -395,7 +542,21 @@
           </td>
           <td valign="top">6<br>
           </td>
-          <td valign="top">28/15<br>
+          <td valign="top" bgcolor="#ccffff">4/105<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">105/4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/28<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">28/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">105<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">28<br>
           </td>
           <td valign="top">105<br>
           </td>
@@ -409,23 +570,31 @@
           </td>
           <td valign="top">9<br>
           </td>
-          <td valign="top">195/28<br>
+          <td valign="top" bgcolor="#ccffff">1365/4<br>
           </td>
-          <td valign="top">4/105<br>
+          <td valign="top" bgcolor="#ccffff">52/105<br>
           </td>
-          <td valign="top">105/4<br>
+          <td valign="top" bgcolor="#ccffff">364/15<br>
           </td>
-          <td valign="top">1365/4<br>
+          <td valign="top" bgcolor="#ccffff">195/28<br>
           </td>
-          <td valign="top">52/105<br>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
           </td>
           <td valign="top">13<br>
           </td>
           <td valign="top">0<br>
           </td>
+          <td valign="top">4<br>
+          </td>
         </tr>
         <tr>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">p8=30/8<br>
           </td>
           <td valign="top">8<br>
           </td>
@@ -433,7 +602,21 @@
           </td>
           <td valign="top"><br>
           </td>
-          <td valign="top">32/15<br>
+          <td valign="top" bgcolor="#ccffff">1/30<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">30<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/32<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">32/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">1<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">30<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">32<br>
           </td>
           <td valign="top">120<br>
           </td>
@@ -447,55 +630,85 @@
           </td>
           <td valign="top"><br>
           </td>
-          <td valign="top">15/8<br>
+          <td valign="top" bgcolor="#ccffff">120<br>
           </td>
-          <td valign="top">1/30<br>
+          <td valign="top" bgcolor="#ccffff">2/15<br>
           </td>
-          <td valign="top">30<br>
+          <td valign="top" bgcolor="#ccffff">128/15<br>
           </td>
-          <td valign="top">120<br>
+          <td valign="top" bgcolor="#ccffff">15/8<br>
           </td>
-          <td valign="top">2/15<br>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
           </td>
           <td valign="top">4<br>
           </td>
           <td valign="top">0<br>
           </td>
+          <td valign="top">4<br>
+          </td>
         </tr>
         <tr>
-          <td valign="top">calculations<br>
+          <td valign="top" bgcolor="#ffccff">calculations<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
           <td valign="top"><br>
           </td>
@@ -509,13 +722,27 @@
           </td>
           <td valign="top">28<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">761/1050<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">135<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">2283/224<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">48/5<br>
+          </td>
+          <td valign="top">22<br>
+          </td>
+          <td valign="top">345<br>
+          </td>
+          <td valign="top">88<br>
+          </td>
+          <td valign="top">104<br>
+          </td>
+          <td valign="top">540<br>
+          </td>
+          <td valign="top">144<br>
+          </td>
+          <td valign="top">480<br>
           </td>
           <td valign="top">60<br>
           </td>
@@ -523,16 +750,26 @@
           </td>
           <td valign="top">35<br>
           </td>
+          <td valign="top">1095<br>
+          </td>
+          <td valign="top">8578/1575<br>
+          </td>
+          <td valign="top">1168/15<br>
+          </td>
           <td valign="top">4289/56</td>
           <td valign="top"><br>
           </td>
           <td valign="top"><br>
           </td>
-          <td valign="top">1095</td>
-          <td valign="top">8578/1575</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
           <td valign="top">49<br>
           </td>
           <td valign="top">11<br>
+          </td>
+          <td valign="top">43<br>
           </td>
         </tr>
         <tr>
@@ -544,13 +781,27 @@
           </td>
           <td valign="top">4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">761/8400<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">135/8<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">2283/1792<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">6/5<br>
+          </td>
+          <td valign="top">11/4<br>
+          </td>
+          <td valign="top">345/8<br>
+          </td>
+          <td valign="top">11<br>
+          </td>
+          <td valign="top">13<br>
+          </td>
+          <td valign="top">135/2<br>
+          </td>
+          <td valign="top">18<br>
+          </td>
+          <td valign="top">60<br>
           </td>
           <td valign="top">15/2<br>
           </td>
@@ -558,16 +809,26 @@
           </td>
           <td valign="top">5<br>
           </td>
+          <td valign="top">1095/8<br>
+          </td>
+          <td valign="top">4289/6300<br>
+          </td>
+          <td valign="top">146/15<br>
+          </td>
           <td valign="top">4289/448</td>
           <td valign="top"><br>
           </td>
           <td valign="top"><br>
           </td>
-          <td valign="top">1095/8</td>
-          <td valign="top">4289/6300</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
           <td valign="top">49/8<br>
           </td>
           <td valign="top">11/8<br>
+          </td>
+          <td valign="top">43/8<br>
           </td>
         </tr>
         <tr>
@@ -579,13 +840,27 @@
           </td>
           <td valign="top">2<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">1/30<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">15/4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">15/32<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">4/15<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">15<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">15<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">4<br>
           </td>
           <td valign="top">1<br>
           </td>
@@ -593,7 +868,13 @@
           </td>
           <td valign="top">1<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">45/4<br>
+          </td>
+          <td valign="top">4/45<br>
+          </td>
+          <td valign="top">4/5<br>
+          </td>
+          <td valign="top">5/4<br>
           </td>
           <td valign="top"><br>
           </td>
@@ -606,6 +887,8 @@
           <td valign="top">0<br>
           </td>
           <td valign="top">0<br>
+          </td>
+          <td valign="top">4<br>
           </td>
         </tr>
         <tr>
@@ -617,13 +900,27 @@
           </td>
           <td valign="top">6<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">4/15<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">30<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">15/4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">32/15<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">105<br>
+          </td>
+          <td valign="top">15<br>
+          </td>
+          <td valign="top">32<br>
+          </td>
+          <td valign="top">120<br>
+          </td>
+          <td valign="top">32<br>
+          </td>
+          <td valign="top">116<br>
           </td>
           <td valign="top">14<br>
           </td>
@@ -631,7 +928,13 @@
           </td>
           <td valign="top">9<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">1365/4<br>
+          </td>
+          <td valign="top">44/15<br>
+          </td>
+          <td valign="top">364/15<br>
+          </td>
+          <td valign="top">165/4<br>
           </td>
           <td valign="top"><br>
           </td>
@@ -645,6 +948,8 @@
           </td>
           <td valign="top">11<br>
           </td>
+          <td valign="top">15<br>
+          </td>
         </tr>
         <tr>
           <td valign="top">distinct count<br>
@@ -655,6 +960,42 @@
           </td>
           <td valign="top">3<br>
           </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
           <td valign="top"><br>
           </td>
           <td valign="top"><br>
@@ -665,21 +1006,7 @@
           </td>
           <td valign="top">8<br>
           </td>
-          <td valign="top">3<br>
-          </td>
-          <td valign="top">3<br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top">8<br>
+          <td valign="top">2<br>
           </td>
           <td valign="top">2<br>
           </td>
@@ -693,13 +1020,27 @@
           </td>
           <td valign="top">2<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">7<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">1<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">7<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">3<br>
           </td>
           <td valign="top">3<br>
           </td>
@@ -707,7 +1048,13 @@
           </td>
           <td valign="top">4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">7<br>
           </td>
           <td valign="top"><br>
           </td>
@@ -718,6 +1065,8 @@
           <td valign="top"><br>
           </td>
           <td valign="top">4<br>
+          </td>
+          <td valign="top">2<br>
           </td>
           <td valign="top">2<br>
           </td>
@@ -739,22 +1088,35 @@ https://github.com/jmorken/math/tree/master/20200814%20A324591%20sequence%20recy
     k={1,2,3,4,5,6,7,8}<br>
     n={}<br>
     diff[n]={}<br>
-    a={}<br>
+    a1={} (a1=1/a2=A335261/A335260)<br>
+    a2={} (a2=1/a1=A335260/A335261)<br>
+    a3={}<br>
+    a4={}<br>
+    a5={} (a5=Numerator[a1]=Denominator[a2])<br>
+    a6={} (a6=Denominator[a1]=Numerator[a2])<br>
+    a7={} (a7=Numerator[a3]=Denominator[a4])<br>
+    a8={} (a8=Denominator[a3]=Numerator[a4])<br>
     b={}<br>
     c={}<br>
     d={}<br>
-    e={}<br>
+    e={} (e=A309497)<br>
     diff[e]={}<br>
     Abs[diff[e]]={}<br>
-    f={}<br>
-    g={}<br>
-    h={}<br>
-    i={}<br>
-    j={}<br>
+    f1={}<br>
+    f2={}<br>
+    f3={}<br>
+    f4={}<br>
+    g={} (empty)<br>
+    h={} (empty)<br>
+    i={} (empty)<br>
+    j={} (empty)<br>
     l={}<br>
     m={}<br>
+    o={}<br>
     <br>
-    <br>
+    (<a moz-do-not-send="true"
+href="tree%20of%20composites%20page2%20transforms1%20mathematica%20a1-a8%20and%20f1-f4.html">mathematica
+      code for a1 to a8 and f1 to f4</a>)<br>
     <br>
     <br>
     <br>
