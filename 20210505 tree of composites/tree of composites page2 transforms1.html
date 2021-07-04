@@ -133,7 +133,7 @@
           </td>
           <td valign="top" bgcolor="#ccffff">a1=p5/k<br>
           </td>
-          <td valign="top" bgcolor="#ccffff">a2=p6*k<br>
+          <td valign="top" bgcolor="#99ff99">a2=p6*k<br>
           </td>
           <td valign="top" bgcolor="#ccffff">a3=p6/k<br>
           </td>
@@ -147,12 +147,12 @@
           </td>
           <td valign="top" bgcolor="#ccffff">a8=D[a3]<br>
           </td>
-          <td valign="top">b=p2*k<br>
+          <td valign="top">b=p2*k=a2*p1<br>
           </td>
           <td valign="top">c=p1*k<br>
           </td>
           <td valign="top">d=p1*n[k]</td>
-          <td valign="top">e=b-d</td>
+          <td valign="top">e=b-d=p1*g</td>
           <td valign="top">diff[e]<br>
           </td>
           <td valign="top">Abs[diff[e]]<br>
@@ -164,15 +164,19 @@
           <td valign="top" bgcolor="#ccffff">f3=e/a3<br>
           </td>
           <td valign="top" bgcolor="#ccffff">f4=e/a4</td>
-          <td valign="top">g (empty)<br>
+          <td valign="top" bgcolor="#99ff99">g=a2-n[k]<br>
           </td>
-          <td valign="top">h (empty)<br>
+          <td valign="top">h=N[g]<br>
           </td>
-          <td valign="top">i (empty)<br>
+          <td valign="top">i=D[g]<br>
           </td>
-          <td valign="top">j (empty)<br>
+          <td valign="top">j=(empty)<br>
           </td>
-          <td valign="top">l=Mod[b,n]<br>
+          <td valign="top">diff[g]<br>
+          </td>
+          <td valign="top">Abs[diff[g]]<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">l=Mod[b,n]<br>
           </td>
           <td valign="top">m=e-l<br>
           </td>
@@ -190,7 +194,7 @@
           </td>
           <td valign="top" bgcolor="#ccffff">4/15<br>
           </td>
-          <td valign="top" bgcolor="#ccffff">15/4<br>
+          <td valign="top" bgcolor="#99ff99">15/4<br>
           </td>
           <td valign="top" bgcolor="#ccffff">15/4<br>
           </td>
@@ -206,7 +210,7 @@
           <td valign="top">15</td>
           <td valign="top">4</td>
           <td valign="top">4</td>
-          <td valign="top">11<br>
+          <td valign="top" bgcolor="#99ff99">11<br>
           </td>
           <td valign="top">-9<br>
           </td>
@@ -219,15 +223,19 @@
           <td valign="top" bgcolor="#ccffff">44/15<br>
           </td>
           <td valign="top" bgcolor="#ccffff">165/4</td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">11/4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">11<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">null<br>
           </td>
-          <td valign="top">0<br>
+          <td valign="top">-9/4<br>
+          </td>
+          <td valign="top">9/4<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">0<br>
           </td>
           <td valign="top">11<br>
           </td>
@@ -245,7 +253,7 @@
           </td>
           <td valign="top" bgcolor="#ccffff">2/15<br>
           </td>
-          <td valign="top" bgcolor="#ccffff">15/2<br>
+          <td valign="top" bgcolor="#99ff99">15/2<br>
           </td>
           <td valign="top" bgcolor="#ccffff">15/8<br>
           </td>
@@ -264,7 +272,7 @@
           </td>
           <td valign="top">28<br>
           </td>
-          <td valign="top">2<br>
+          <td valign="top" bgcolor="#99ff99">2<br>
           </td>
           <td valign="top">-1<br>
           </td>
@@ -278,15 +286,18 @@
           </td>
           <td valign="top" bgcolor="#ccffff">15/4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">1/2<br>
           </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
+          <td valign="top">1<br>
           </td>
           <td valign="top">2<br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top">-1/4<br>
+          </td>
+          <td valign="top">1/4<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">2<br>
           </td>
           <td valign="top">0<br>
           </td>
@@ -304,7 +315,7 @@
           </td>
           <td valign="top" bgcolor="#ccffff">4/45<br>
           </td>
-          <td valign="top" bgcolor="#ccffff">45/4<br>
+          <td valign="top" bgcolor="#99ff99">45/4<br>
           </td>
           <td valign="top" bgcolor="#ccffff">5/4<br>
           </td>
@@ -324,7 +335,7 @@
           </td>
           <td valign="top">44<br>
           </td>
-          <td valign="top">1<br>
+          <td valign="top" bgcolor="#99ff99">1<br>
           </td>
           <td valign="top">7<br>
           </td>
@@ -338,15 +349,18 @@
           </td>
           <td valign="top" bgcolor="#ccffff">5/4<br>
           </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">1/4<br>
           </td>
           <td valign="top">1<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top">7/4<br>
+          </td>
+          <td valign="top">7/4<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">1<br>
           </td>
           <td valign="top">0<br>
           </td>
@@ -364,7 +378,7 @@
           </td>
           <td valign="top" bgcolor="#ccffff">1/15<br>
           </td>
-          <td valign="top" bgcolor="#ccffff">15<br>
+          <td valign="top" bgcolor="#99ff99">15<br>
           </td>
           <td valign="top" bgcolor="#ccffff">15/6<br>
           </td>
@@ -384,7 +398,7 @@
           </td>
           <td valign="top">52<br>
           </td>
-          <td valign="top">8<br>
+          <td valign="top" bgcolor="#99ff99">8<br>
           </td>
           <td valign="top">-1<br>
           </td>
@@ -398,15 +412,18 @@
           </td>
           <td valign="top" bgcolor="#ccffff">15/2<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">2<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">2<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">1<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">null</td>
+          <td valign="top">-1/4<br>
           </td>
-          <td valign="top">8<br>
+          <td valign="top">1/4<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">8<br>
           </td>
           <td valign="top">0<br>
           </td>
@@ -424,7 +441,7 @@
           </td>
           <td valign="top" bgcolor="#ccffff">4/75<br>
           </td>
-          <td valign="top" bgcolor="#ccffff">75/4<br>
+          <td valign="top" bgcolor="#99ff99">75/4<br>
           </td>
           <td valign="top" bgcolor="#ccffff">3/4<br>
           </td>
@@ -444,7 +461,7 @@
           </td>
           <td valign="top">68<br>
           </td>
-          <td valign="top">7<br>
+          <td valign="top" bgcolor="#99ff99">7<br>
           </td>
           <td valign="top">7<br>
           </td>
@@ -458,15 +475,18 @@
           </td>
           <td valign="top" bgcolor="#ccffff">21/4<br>
           </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">7/4<br>
           </td>
           <td valign="top">7<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top">7/4<br>
+          </td>
+          <td valign="top">7/4<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">7<br>
           </td>
           <td valign="top">0<br>
           </td>
@@ -484,7 +504,7 @@
           </td>
           <td valign="top" bgcolor="#ccffff">2/45<br>
           </td>
-          <td valign="top" bgcolor="#ccffff">45/2<br>
+          <td valign="top" bgcolor="#99ff99">45/2<br>
           </td>
           <td valign="top" bgcolor="#ccffff">5/8<br>
           </td>
@@ -504,7 +524,7 @@
           </td>
           <td valign="top">76<br>
           </td>
-          <td valign="top">14<br>
+          <td valign="top" bgcolor="#99ff99">14<br>
           </td>
           <td valign="top">-1<br>
           </td>
@@ -518,15 +538,18 @@
           </td>
           <td valign="top" bgcolor="#ccffff">35/4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">7/2<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">7<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">2<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">null</td>
+          <td valign="top">-1/4<br>
           </td>
-          <td valign="top">14<br>
+          <td valign="top">1/4<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">14<br>
           </td>
           <td valign="top">0<br>
           </td>
@@ -544,7 +567,7 @@
           </td>
           <td valign="top" bgcolor="#ccffff">4/105<br>
           </td>
-          <td valign="top" bgcolor="#ccffff">105/4<br>
+          <td valign="top" bgcolor="#99ff99">105/4<br>
           </td>
           <td valign="top" bgcolor="#ccffff">15/28<br>
           </td>
@@ -564,7 +587,7 @@
           </td>
           <td valign="top">92<br>
           </td>
-          <td valign="top">13<br>
+          <td valign="top" bgcolor="#99ff99">13<br>
           </td>
           <td valign="top">-9<br>
           </td>
@@ -578,15 +601,18 @@
           </td>
           <td valign="top" bgcolor="#ccffff">195/28<br>
           </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">13/4<br>
           </td>
           <td valign="top">13<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top">-9/4<br>
+          </td>
+          <td valign="top">9/4<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">13<br>
           </td>
           <td valign="top">0<br>
           </td>
@@ -604,7 +630,7 @@
           </td>
           <td valign="top" bgcolor="#ccffff">1/30<br>
           </td>
-          <td valign="top" bgcolor="#ccffff">30<br>
+          <td valign="top" bgcolor="#99ff99">30<br>
           </td>
           <td valign="top" bgcolor="#ccffff">15/32<br>
           </td>
@@ -624,7 +650,7 @@
           </td>
           <td valign="top">116<br>
           </td>
-          <td valign="top">4<br>
+          <td valign="top" bgcolor="#99ff99">4<br>
           </td>
           <td valign="top">null<br>
           </td>
@@ -638,15 +664,18 @@
           </td>
           <td valign="top" bgcolor="#ccffff">15/8<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#99ff99">1<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">1<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">1<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">null</td>
+          <td valign="top">null<br>
           </td>
-          <td valign="top">4<br>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">4<br>
           </td>
           <td valign="top">0<br>
           </td>
@@ -710,7 +739,11 @@
           </td>
           <td valign="top" bgcolor="#ffccff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
           </td>
         </tr>
         <tr>
@@ -757,13 +790,16 @@
           <td valign="top">1168/15<br>
           </td>
           <td valign="top">4289/56</td>
-          <td valign="top"><br>
+          <td valign="top">15<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">43<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">22<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">null</td>
+          <td valign="top">-7/4<br>
+          </td>
+          <td valign="top">35/4<br>
           </td>
           <td valign="top">49<br>
           </td>
@@ -816,13 +852,16 @@
           <td valign="top">146/15<br>
           </td>
           <td valign="top">4289/448</td>
-          <td valign="top"><br>
+          <td valign="top">15/8<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">43/8<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">11/4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">null</td>
+          <td valign="top">-1/4<br>
+          </td>
+          <td valign="top">5/4<br>
           </td>
           <td valign="top">49/8<br>
           </td>
@@ -876,13 +915,16 @@
           </td>
           <td valign="top">5/4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">1/4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">1<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">1<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">null</td>
+          <td valign="top">-9/4<br>
+          </td>
+          <td valign="top">1/4<br>
           </td>
           <td valign="top">0<br>
           </td>
@@ -936,19 +978,278 @@
           </td>
           <td valign="top">165/4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">7/2<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">13<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">null</td>
+          <td valign="top">7/4<br>
+          </td>
+          <td valign="top">9/4<br>
           </td>
           <td valign="top">14<br>
           </td>
           <td valign="top">11<br>
           </td>
           <td valign="top">15<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">first<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">second<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">penultimate<br>
+          </td>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">23<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">last<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">29<br>
+          </td>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
           </td>
         </tr>
         <tr>
@@ -996,13 +1297,16 @@
           </td>
           <td valign="top">8<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">8<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">5<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">3<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">null</td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">3<br>
           </td>
           <td valign="top">8<br>
           </td>
@@ -1056,13 +1360,16 @@
           </td>
           <td valign="top">7<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">3<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">6<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">4<br>
           </td>
-          <td valign="top"><br>
+          <td valign="top">null</td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">4<br>
           </td>
           <td valign="top">4<br>
           </td>
@@ -1073,6 +1380,17 @@
         </tr>
       </tbody>
     </table>
+    <a moz-do-not-send="true"
+href="tree%20of%20composites%20page2%20transforms1%20mathematica%20transforms1.html">link
+      to Mathematica code for above table</a><br>
+    (make this code for the table into a function or module and create a
+    table of tables, then calculate values across tables ie for the 1,
+    1, 2, 4, 8, 16, 26, 50, 88, 176, 352, 576, 824, 1248, 2040, 4080,
+    8160, 16320, 21728, 34480, 53520, 69648, 111808, 223616, 326464
+    sequence etc)<br>
+    (also store the tables to disk instead of ram)<br>
+    (also make tables for the below table variant that uses the A324591
+    recycled sequence)<br>
     <br>
     notes: <br>
     --write g and h formula at top of table in terms of multipled k
@@ -1102,7 +1420,8 @@ https://github.com/jmorken/math/tree/master/20200814%20A324591%20sequence%20recy
     b={15, 30, 45, 60, 75, 90, 105, 120}<br>
     c={4, 8, 12, 16, 20, 24, 28, 32}<br>
     d={4, 28, 44, 52, 68, 76, 92, 116}<br>
-    e={11, 2, 1, 8, 7, 14, 13, 4} (e=A309497)<br>
+    e={11, 2, 1, 8, 7, 14, 13, 4}
+    (e=b-d=p1*g=p1*(a2-n[k])=p1*((p6*k)-n[k])=p2*k-p1*n[k]=A309497)<br>
     diff[e]={-9, -1, 7, -1, 7, -1, -9, null}<br>
     Abs[diff[e]]={9, 1, 7, 1, 7, 1, 9, null}<br>
     f1={165/4, 15, 45/4, 120, 525/4, 315, 1365/4, 120} (f1=e/a1)<br>
@@ -1110,16 +1429,18 @@ https://github.com/jmorken/math/tree/master/20200814%20A324591%20sequence%20recy
     f3={44/15, 16/15, 4/5, 128/15, 28/3, 112/5, 364/15, 128/15}
     (f3=e/a3)<br>
     f4={165/4, 15/4, 5/4, 15/2, 21/4, 35/4, 195/28, 15/8} (f4=e/a4)<br>
-    g={} (empty)<br>
-    h={} (empty)<br>
-    i={} (empty)<br>
-    j={} (empty)<br>
-    l={}<br>
+    g={}<br>
+    h={}<br>
+    i={}<br>
+    j={}(empty)<br>
+    l={} (for l, check positions where l != e, also check count and
+    proportion of values in l that match values in e etc, also see m and
+    o)<br>
     m={}<br>
     o={}<br>
     <br>
     (<a moz-do-not-send="true"
-      href="matchematica%20test%20code%20for%20Mod%20A309497%20matches.html">matchematica
+      href="matchematica%20test%20code%20for%20Mod%20A309497%20matches.html">mathematica
 
       test code for Mod A309497 matches</a>)<br>
     <br>
@@ -1129,6 +1450,1306 @@ href="tree%20of%20composites%20page2%20transforms1%20mathematica%20a1-a8%20and%2
 
       code for a1 to a8 and f1 to f4</a>)<br>
     <br>
+    <br>
+    <br>
+    Table adjusted for A309497 alternate sequence (ie ruler shifted by
+    half interval)<br>
+    "try to set bb and dd so that bb-dd=ee, ie ll=Mod[bb,n] might help
+    if assume ll can be similar sequence to ee (ie can find values of bb
+    that can work then)"<br>
+    "ee=bb-dd(check formula) also check other formulas for ee etc" <br>
+    "checked correct formula: ee=(p1*2)*gg" (make sure it is p1*2 and
+    not p3, ie both are 8 for this table, pretty sure it is p1 though)<br>
+    "ee=recycled A324591 (add more info from that recycled sequence
+    too)"<br>
+    "recycled A324591:
+https://github.com/jmorken/math/blob/master/20200814%20A324591%20sequence%20recycled%20related%20to%20A309497)/sequence%20info%20that%20was%20recycled.txt"<br>
+    "also show formula of ee=e-Reverse[e] etc"<br>
+    "find new b, c, d (bb, cc, dd) that can generate correct ee and new
+    ll, mm, oo"<br>
+    "find correct formulas for aa1,aa3,aa4,bb,cc,dd, etc"<br>
+    "for formulas for constraints for rows of A309497, in terms of other
+    oeis sequences, try to relate those back to formulas for A309497
+    etc, ie circular formulas"<br>
+    "bb=aa2*p1 I think (but doesn't give a very good Mod[bb,n] result
+    still)"<br>
+    "try Mod[Numerator[bb], n] for larger rows maybe etc"<br>
+    "can indicate formulas are not for sure correct, and then edit later
+    in Mathematica, good to get the multi-table Mathematica
+    code/function done"<br>
+    "found dd by first finding ee and bb, ie: dd=bb-ee (not sure if
+    useful or correct)"<br>
+    <table width="658" cellspacing="2" cellpadding="2" border="1"
+      height="541">
+      <tbody>
+        <tr>
+          <td valign="top" bgcolor="#99ff99">proportion 8/30=4/15<br>
+          </td>
+          <td valign="top">k<br>
+          </td>
+          <td valign="top">n<br>
+          </td>
+          <td valign="top">diff[n]<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">aa1=(p5/2)/k?=p3/(p2 +
+            (p2*(k - 1)*2))<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">aa2=p6/2+p6*(k-1)=(p2 +
+            (p2*(k - 1)*2))/p3<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">aa3=(p6/2)/k<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">aa4=(p5*2)*k<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">aa5=N[a1]<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">aa6=D[a1]<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">aa7=N[a3]<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">aa8=D[a3]<br>
+          </td>
+          <td valign="top">bb=p2*k?=aa2*p1<br>
+          </td>
+          <td valign="top">cc=p1*k?<br>
+          </td>
+          <td valign="top">dd=p1*n[k]? (dd=bb-ee)<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">ee=bb-dd=(p1*2)*gg</td>
+          <td valign="top">diff[ee]<br>
+          </td>
+          <td valign="top">Abs[diff[ee]]<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">ff1=ee/aa1<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">ff2=ee/aa2<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">ff3=ee/aa3<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">ff4=ee/aa4</td>
+          <td valign="top" bgcolor="#99ff99">gg=aa2-n[k] </td>
+          <td valign="top">hh=N[gg]<br>
+          </td>
+          <td valign="top">ii=D[gg]<br>
+          </td>
+          <td valign="top">jj=(empty)<br>
+          </td>
+          <td valign="top">diff[gg]<br>
+          </td>
+          <td valign="top">Abs[diff[gg]]<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">ll=Mod[bb,n]<br>
+          </td>
+          <td valign="top">mm=ee-ll<br>
+          </td>
+          <td valign="top">oo=Quotient[bb,n]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#99ff99">p1=4<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/15<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">15/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top">15/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">1/2<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">7<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">7/8<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">1/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#99ff99">p2=15<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/45<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">45/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/16<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">16/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top">45/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">67/2<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">-11<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">-11/8<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">3/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#99ff99">p3=8<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">11<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/75<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">75/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">5/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/5<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top">75/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">101/2<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">-13<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">-13/8<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">9/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#99ff99">p4=30<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top">13<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/105<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">105/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/32<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">32/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top">105/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">103/2<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">1<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">1/8<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">1/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#99ff99">p5=4/15<br>
+          </td>
+          <td valign="top">5<br>
+          </td>
+          <td valign="top">17<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/135<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">135/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">3/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/3<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top">135/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">137/2<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">-1<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">-1/8<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">33/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#99ff99">p6=15/4<br>
+          </td>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top">19<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/165<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">165/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">5/16<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">16/5<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top">165/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">139/2<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">13<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">13/8<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">13/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#99ff99">p7=8/30<br>
+          </td>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">23<br>
+          </td>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/195<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">195/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/56<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">56/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top">195/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">173/2<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">11<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">11/8<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">11/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#99ff99">p8=30/8<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">29<br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">8/225<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">225/8<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">15/64<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff">64/15<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top">225/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">239/2<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">-7<br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ccffff"><br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">-7/8<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top" bgcolor="#99ff99">51/2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#ffccff">calculations<br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffccff"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">total<br>
+          </td>
+          <td valign="top">36<br>
+          </td>
+          <td valign="top">120<br>
+          </td>
+          <td valign="top">28<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">mean<br>
+          </td>
+          <td valign="top">9/2<br>
+          </td>
+          <td valign="top">15<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">min<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">max<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">29<br>
+          </td>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">first<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">second<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">penultimate<br>
+          </td>
+          <td valign="top">7<br>
+          </td>
+          <td valign="top">23<br>
+          </td>
+          <td valign="top">4<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">last<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">29<br>
+          </td>
+          <td valign="top">6<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">distinct count<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">8<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">first differences distinct count<br>
+          </td>
+          <td valign="top">1<br>
+          </td>
+          <td valign="top">3<br>
+          </td>
+          <td valign="top">2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">null</td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <br>
     <br>
     <br>

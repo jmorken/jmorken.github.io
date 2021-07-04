@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>test code for Mod A309497 matches</title>
+  </head>
+  <body>
+    A309497 = {27, -18, 1, 4, 23, 26, 13, 32, 19, 22, 41, 44, 31, 18,
+    37, <br>
+    &nbsp;&nbsp; 24, 27, 46, 33, 36, 23, -6, -3, 16, 19, 38, 41, 12, -1,
+    2, -11, 8, <br>
+    &nbsp;&nbsp; 11, -2, 17, 4, -9, -6, 13, 16, 3, 22, 9, 12, 31, 34,
+    53, 8};<br>
+    A286941 = {1, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
+    61, <br>
+    &nbsp;&nbsp; 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113,
+    121, 127, 131,<br>
+    &nbsp;&nbsp;&nbsp; 137, 139, 143, 149, 151, 157, 163, 167, 169, 173,
+    179, 181, 187, <br>
+    &nbsp;&nbsp; 191, 193, 197, 199, 209};<br>
+    x = 35;<br>
+    <br>
+    (*<br>
+    A309497={11,2,1,8,7,14,13,4};<br>
+    A286941={1,7,11,13,17,19,23,29};<br>
+    x=15;<br>
+    *)<br>
+    <br>
+    (*x is denominator of A038110/A060753 ie denominator of: 4/15, 8/35,
+    \<br>
+    16/77*)<br>
+    <br>
+    b = {};<br>
+    For[i = 1, i &lt;= Length[A309497], i++,<br>
+    &nbsp;AppendTo[b, x*i]<br>
+    &nbsp;]<br>
+    b<br>
+    <br>
+    z = Mod[b, <br>
+    &nbsp; A286941] (*matches A309497 for positive values in A309497*)<br>
+    Quotient[b, A286941]<br>
+    <br>
+    Intersection[Mod[b, A286941], A309497]<br>
+    Position[Mod[b, A286941], A309497]<br>
+    <br>
+    matches = {};<br>
+    notMatches = {};<br>
+    matchPositions = {};<br>
+    notMatchesPositions = {};<br>
+    notMatchesA309497 = {};<br>
+    For[i = 1, i &lt;= Length[A309497], i++,<br>
+    &nbsp;If[z[[i]] == A309497[[i]],<br>
+    &nbsp; AppendTo[matches, z[[i]]];<br>
+    &nbsp; AppendTo[matchPositions, i],<br>
+    &nbsp; AppendTo[notMatches, z[[i]]];<br>
+    &nbsp; AppendTo[notMatchesA309497, A309497[[i]]];<br>
+    &nbsp; AppendTo[notMatchesPositions, i]<br>
+    &nbsp; ]<br>
+    &nbsp;]<br>
+    Length[A309497]<br>
+    Length[matches]<br>
+    matches<br>
+    Length[notMatches]<br>
+    notMatches<br>
+    Length[notMatchesA309497]<br>
+    notMatchesA309497<br>
+    matchPositions<br>
+    notMatchesPositions<br>
+    <br>
+    (*<br>
+    test for deleted sequence that is similar to A309497 to see if it
+    has \<br>
+    the same pattern of matches etc<br>
+    https://github.com/jmorken/math/tree/master/20200814%20A324591%\<br>
+    20sequence%20recycled%20related%20to%20A309497<br>
+    *)<br>
+    <br>
+  </body>
+</html>

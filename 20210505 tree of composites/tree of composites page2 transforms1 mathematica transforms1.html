@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>mathematica code transforms1</title>
+  </head>
+  <body>
+    x = 3; (*ie 3 to generate table for proportion 4/15*)<br>
+    <br>
+    p4 = Times @@ Prime[Range[x]];<br>
+    p1 = Numerator[EulerPhi[p4]/p4];<br>
+    p2 = Denominator[EulerPhi[p4]/p4];<br>
+    p3 = EulerPhi[p4];<br>
+    p5 = EulerPhi[p4]/p4;<br>
+    p6 = p4/EulerPhi[p4];<br>
+    k = Range[1, p3];<br>
+    n = Function[P, Select[Range@P, CoprimeQ[#, P] &amp;]]@<br>
+    &nbsp;&nbsp; Product[Prime@i, {i, x}];<br>
+    a1 = p5/k;<br>
+    a2 = p6*k;<br>
+    a3 = p6/k;<br>
+    a4 = p5*k;<br>
+    a5 = Numerator[a1];<br>
+    a6 = Denominator[a1];<br>
+    a7 = Numerator[a3];<br>
+    a8 = Denominator[a3];<br>
+    b = p2*k;<br>
+    (*b\[Equal]a2*p1*)<br>
+    c = p1*k;<br>
+    d = p1*n;<br>
+    e = b - d;<br>
+    g = a2 - n;<br>
+    (*e\[Equal]p1*g*)<br>
+    f1 = e/a1;<br>
+    f2 = e/a2;<br>
+    f3 = e/a3;<br>
+    f4 = e/a4;<br>
+    h = Numerator[g];<br>
+    i = Denominator[g];<br>
+    l = Mod[b, n];<br>
+    m = e - l;<br>
+    o = Quotient[b, n];<br>
+    <br>
+    treeOfCompositesTable = <br>
+    &nbsp; List[p1, p2, p3, p4, p5, p6, k, n, a1, a2, a3, a4, a5, a6,
+    a7, a8, <br>
+    &nbsp;&nbsp; b, c, d, e, f1, f2, f3, f4, g, h, i, l, m, o];<br>
+    <br>
+    MatrixForm[treeOfCompositesTable];<br>
+    Print["tree of composities"]<br>
+    MatrixForm[Drop[treeOfCompositesTable, 6]]<br>
+    Print["tree of composities transposed"]<br>
+    MatrixForm[Transpose[Drop[treeOfCompositesTable, 6]]]<br>
+    <br>
+    treeOfCompositesTableCalculationsTotal = {};<br>
+    treeOfCompositesTableCalculationsMean = {};<br>
+    treeOfCompositesTableCalculationsMin = {};<br>
+    treeOfCompositesTableCalculationsMax = {};<br>
+    treeOfCompositesTableCalculationsFirst = {};<br>
+    treeOfCompositesTableCalculationsSecond = {};<br>
+    treeOfCompositesTableCalculationsPenultimate = {};<br>
+    treeOfCompositesTableCalculationsLast = {};<br>
+    treeOfCompositesTableCalculationsDistinctCount = {};<br>
+    treeOfCompositesTableCalculationsFirstDifferencesDistinctCount = {};<br>
+    <br>
+    For[i = 7, i &lt;= Length[treeOfCompositesTable], i++,<br>
+    &nbsp;AppendTo[treeOfCompositesTableCalculationsTotal, <br>
+    &nbsp; Total[treeOfCompositesTable[[i]]]];<br>
+    &nbsp;AppendTo[treeOfCompositesTableCalculationsMean, <br>
+    &nbsp; Mean[treeOfCompositesTable[[i]]]];<br>
+    &nbsp;AppendTo[treeOfCompositesTableCalculationsMin, <br>
+    &nbsp; Min[treeOfCompositesTable[[i]]]];<br>
+    &nbsp;AppendTo[treeOfCompositesTableCalculationsMax, <br>
+    &nbsp; Max[treeOfCompositesTable[[i]]]];<br>
+    &nbsp;AppendTo[treeOfCompositesTableCalculationsFirst, <br>
+    &nbsp; First[treeOfCompositesTable[[i]]]];<br>
+    &nbsp;AppendTo[treeOfCompositesTableCalculationsSecond, <br>
+    &nbsp; treeOfCompositesTable[[i]][[2]]];<br>
+    &nbsp;AppendTo[treeOfCompositesTableCalculationsPenultimate, <br>
+    &nbsp; treeOfCompositesTable[[i]][[-2]]];<br>
+    &nbsp;AppendTo[treeOfCompositesTableCalculationsLast, <br>
+    &nbsp; Last[treeOfCompositesTable[[i]]]];<br>
+    &nbsp;AppendTo[treeOfCompositesTableCalculationsDistinctCount, <br>
+    &nbsp; CountDistinct[treeOfCompositesTable[[i]]]];<br>
+    &nbsp;AppendTo[<br>
+    &nbsp;
+    treeOfCompositesTableCalculationsFirstDifferencesDistinctCount, <br>
+    &nbsp; CountDistinct[Differences[treeOfCompositesTable[[i]]]]]<br>
+    &nbsp;]<br>
+    <br>
+    treeOfCompositesTableCalculations = <br>
+    &nbsp; List[treeOfCompositesTableCalculationsTotal, <br>
+    &nbsp;&nbsp; treeOfCompositesTableCalculationsMean, <br>
+    &nbsp;&nbsp; treeOfCompositesTableCalculationsMin, <br>
+    &nbsp;&nbsp; treeOfCompositesTableCalculationsMax, <br>
+    &nbsp;&nbsp; treeOfCompositesTableCalculationsFirst, <br>
+    &nbsp;&nbsp; treeOfCompositesTableCalculationsSecond, <br>
+    &nbsp;&nbsp; treeOfCompositesTableCalculationsPenultimate, <br>
+    &nbsp;&nbsp; treeOfCompositesTableCalculationsLast, <br>
+    &nbsp;&nbsp; treeOfCompositesTableCalculationsDistinctCount, <br>
+    &nbsp;&nbsp;
+    treeOfCompositesTableCalculationsFirstDifferencesDistinctCount];<br>
+    <br>
+    Print["calculations"]<br>
+    MatrixForm[treeOfCompositesTableCalculations]<br>
+    Print["calculations transposed"]<br>
+    MatrixForm[Transpose[treeOfCompositesTableCalculations]]<br>
+  </body>
+</html>
