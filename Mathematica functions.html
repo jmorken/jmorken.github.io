@@ -15,6 +15,11 @@
     &amp;]<br>
     <br>
     <br>
+    <hr width="100%" size="2"><br>
+    <br>
+    listDuplicates[l_] := DeleteDuplicates@Block[{i}, i[n_] := (i[n] =
+    n; Unevaluated@Sequence[]); i /@ l]<br>
+    <br>
     <br>
     <hr width="100%" size="2"><br>
     <br>
@@ -48,10 +53,10 @@
     <br>
     <hr width="100%" size="2"><br>
     <br>
-(*https://mathematica.stackexchange.com/questions/65708/how-do-i-find-\<br>
-    the-position-of-the-maximum-value-in-each-column-of-a-table*)<br>
-    (*function to find the position(s) of max values in columns of a \<br>
+(*https://mathematica.stackexchange.com/questions/65708/how-do-i-find-the-position-of-the-maximum-value-in-each-column-of-a-table*)<br>
+    (*function to find the position(s) of max values in columns of a
     table, also other code on that same stackexchange page*)<br>
+    <br>
     maxValuePositions[list_] := <br>
     &nbsp;Join @@ MapIndexed[Thread[{First /@ Position[#, Max@#],
     First@#2}] &amp;,<br>
@@ -62,20 +67,92 @@
     <br>
     <hr width="100%" size="2"><br>
     <br>
+    (*read data from websites into mathematica:*)<br>
     <br>
+    (* example of a webpage with a single table*)<br>
+    data = Import[<br>
+    &nbsp;
+    "https://jmorken.github.io/20210505%20tree%20of%20composites/tree%\<br>
+    20of%20composites%20page2%20transforms1.html", "Data"]<br>
     <br>
+    data2 = data[[2 ;; 9, <br>
+    &nbsp;&nbsp; 2 ;; 22]] (*extract rows 2 through 9 and columns 2
+    through 21*)<br>
+    <br>
+    MatrixForm[data2]<br>
+    data2[[1]]<br>
+    data3 = Transpose[data2] (*transpose rows and columns*)<br>
+    MatrixForm[data3]<br>
+    data3[[1]]<br>
+    <br>
+    (* example of a webpage with multiple tables*)<br>
+    data = Import[<br>
+    &nbsp;
+    "https://jmorken.github.io/20210505%20tree%20of%20composites/tree%\<br>
+    20of%20composites%20page2.html", "Data"]<br>
+    data[[1]] (*display first table*)<br>
     <br>
     <br>
     <hr width="100%" size="2"><br>
     <br>
     <br>
+    (*file I/O*)<br>
+    <br>
+    (*can use one notebook to generate data and export .mx files and
+    then another notebook in the same local folder with code to import
+    and process the .mx files etc *)<br>
+    <br>
+    Directory[] (*check the current directory*)<br>
+    SetDirectory[NotebookDirectory[]] (*set the directory to the current
+    directory the notebook is in before importing and exporting data
+    from files*)<br>
+    <br>
+    Print["export and import as binary format (fastest)"]<br>
+    Export["planetaryGearList.mx", planetaryGearList]<br>
+    xyz=Import["planetaryGearList.mx"]<br>
+    <br>
+    Print["save as user readable mathematica package"]<br>
+(*Save["planetaryGearListWithGearRatios.m",planetaryGearListWithGearRatios];*)<br>
+    (*xyz=Get["planetaryGearListWithGearRatios.m"]*)<br>
+    Print["export and import as user readable mathematica package"]<br>
+Export["planetaryGearListWithGearRatios.m",planetaryGearListWithGearRatios];<br>
+    xyz=Import["planetaryGearListWithGearRatios.m"]<br>
+    <br>
+    Print["export and import as plain text table"]<br>
+Export["planetaryGearListWithGearRatios.txt",planetaryGearListWithGearRatios,"Table"]<br>
+    xyz=Import["planetaryGearListWithGearRatios.txt","Table"]<br>
+    <br>
+    Print["export and import as comma delimited csv"]<br>
+Export["planetaryGearListWithGearRatios.csv",planetaryGearListWithGearRatios]<br>
+    (*xyz=Import["planetaryGearListWithGearRatios.csv"]*)<br>
     <br>
     <br>
     <br>
     <hr width="100%" size="2"><br>
     <br>
+    Print["export listplot images"]<br>
     <br>
+    listPlotToExport=ListPlot[planetaryGearRatios];<br>
+Export["planetaryGearListWithGearRatios-default.eps",listPlotToExport,"EPS"];<br>
+Export["planetaryGearListWithGearRatios-default.svg",listPlotToExport,"SVG"];<br>
+    Export["planetaryGearListWithGearRatios-default.png",listPlotToExport,"PNG"];
+    (*png is easiest to view in windows*)<br>
     <br>
+    (*code for listplot export from:
+    https://mathematica.stackexchange.com/questions/18999/obtaining-better-quality-in-listplot
+    *)<br>
+    <br>
+    data=planetaryGearRatios;<br>
+S0=ListPlot[data,Axes-&gt;False,Frame-&gt;True,FrameLabel-&gt;{"x",OverDot["x"]},RotateLabel-&gt;False,FrameStyle-&gt;Directive[FontSize-&gt;17,FontFamily-&gt;"Helvetica"],PlotStyle-&gt;{Black,PointSize[0.001]},PlotRange-&gt;{{0,5000},{0,0.5}},ImageSize-&gt;550];<br>
+    (*Export["pss_plot0-5000.eps",S0,"EPS"];*)<br>
+    (*Export["pss_plot0-5000.svg",S0,"SVG"];*)<br>
+    Export["pss_plot0-5000.png",S0,"PNG"];<br>
+    <br>
+    data=planetaryGearRatios;<br>
+S0=ListPlot[data,Axes-&gt;False,Frame-&gt;True,FrameLabel-&gt;{"x",OverDot["x"]},RotateLabel-&gt;False,FrameStyle-&gt;Directive[FontSize-&gt;17,FontFamily-&gt;"Helvetica"],PlotStyle-&gt;{Black,PointSize[0.001]},PlotRange-&gt;{{20000,40000},{0,0.5}},ImageSize-&gt;550];<br>
+    (*Export["pss_plot20000-40000.eps",S0,"EPS"];*)<br>
+    (*Export["pss_plot20000-40000.svg",S0,"SVG"];*)<br>
+    Export["pss_plot20000-40000.png",S0,"PNG"];<br>
     <br>
     <br>
     <hr width="100%" size="2"><br>
