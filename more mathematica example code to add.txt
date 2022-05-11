@@ -1,0 +1,19 @@
+(*StringForm example code*)
+sequenceStrings = {"A14123", "A12342", "A23556", "A123423"};
+testSequence = {3, 35, 100};
+formulasAndValues = {};
+For[i = 1, i < 4, i++,
+ temp = StringForm["formula: ((``*``)/(``^2)) values: ``.", 
+   sequenceStrings[[i]], sequenceStrings[[2]], sequenceStrings[[3]], 
+   testSequence];
+ AppendTo[formulasAndValues, temp]
+ ]
+formulasAndValues[[1]] (*output: formula:((A14123*A12342)/(A23556^2)) \
+values:{3,35,100}. *)
+formulasAndValues (*output: {formula:((A14123*A12342)/(A23556^2)) \
+values:{3,35,100}.,formula:((A12342*A12342)/(A23556^2)) \
+values:{3,35,100}.,formula:((A23556*A12342)/(A23556^2)) \
+values:{3,35,100}.} *)
+
+
+
