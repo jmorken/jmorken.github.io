@@ -43,7 +43,6 @@
       Example for the gear ratio: S/(R + S) for S=8, R=22:
       8/(22+8)=8/30=4/15=A038110(4)/A060753(4).<br>
       <br>
-      <br>
       Pictures of 105 rotations of the planetary gear: (step label step5
       was accidentally skipped)<br>
       <br>
@@ -123,6 +122,47 @@ href="https://www.wolframalpha.com/input/?i=%28%28105%2F11%29*8%29%2B%287*2%29%2
       When the sun gear is fixed, the 105 ring gear rotations, gives 60
       planet rotations, and 105*(4/15)=28 planet carrier rotations.<br>
       &nbsp;<br>
+      <br>
+      <br>
+      More gear ratios:<br>
+      <br>
+      S=8 #teeth on sun<br>
+      R=22 #teeth on ring<br>
+      P=(R-S)/2 #teeth on planet<br>
+      Pc=planet carrier<br>
+      <br>
+      input: Pc<br>
+      output: S<br>
+      fixed: R<br>
+      gear ratio=1+R/S=A060753/A038110=15/4<br>
+      <br>
+      input: S<br>
+      output: Pc<br>
+      fixed: R<br>
+      gear ratio=S/(S+R)=A038110/A060753=4/15<br>
+      <br>
+      input: R<br>
+      output: S<br>
+      fixed: Pc<br>
+      gear ratio=-S/R=-A038110/A161527=-4/11<br>
+      <br>
+      input: S<br>
+      output: R<br>
+      fixed: Pc<br>
+      gear ratio=-R/S=-A161527/A038110=-11/4<br>
+      <br>
+      input: Pc<br>
+      output: R<br>
+      fixed: S<br>
+      gear ratio=1+S/R=A060753/A161527=15/11<br>
+      <br>
+      input: R<br>
+      output: Pc<br>
+      fixed: S<br>
+      gear ratio=1/(1+S/R)=A161527/A060753=11/15<br>
+      <br>
+      <br>
+      <br>
       <br>
       <br>
       <br>
