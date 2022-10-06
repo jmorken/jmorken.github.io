@@ -17,3 +17,18 @@ values:{3,35,100}.} *)
 
 
 
+
+(*find subsequences with distinct consecutive values from original sequence x, with up to z repeat values*)
+(*https://mathematica.stackexchange.com/questions/274384/subsequences-with-distinct-values/274397#274397*)
+subseqs[x_,z_]:=Flatten[Rest[FoldWhileList[Select[
+  DeleteDuplicates[Subsequences[x,{#2}]],
+    (Max[Values[Counts[#]]]<=z)&]&,0,Range[Length[x]],(#=!={})&]],1];
+subseqs[{6,4,2,4,2,4,6},2]
+(* {{6},{4},{2},
+    {6,4},{4,2},{2,4},{4,6},
+    {6,4,2},{4,2,4},{2,4,2},{2,4,6},
+    {6,4,2,4},{4,2,4,2},{2,4,2,4},{4,2,4,6},
+    {6,4,2,4,2},{2,4,2,4,6}} *)
+
+ 
+
