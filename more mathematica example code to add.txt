@@ -32,3 +32,12 @@ subseqs[{6,4,2,4,2,4,6},2]
 
  
 
+
+(*save a list into comma delimited values in a text file and read the text file back into a list*)
+x = {1, 2, 3, 4, 5};
+Export["mylist.txt", StringJoin[Riffle[ToString /@ x, ", "]], "Text"]
+x = Import["mylist.txt", "Text"]
+x = ToExpression@StringSplit[x, ", "]
+
+
+
