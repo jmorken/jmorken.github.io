@@ -1,7 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title></title>
   </head>
@@ -10,6 +9,34 @@
     (*https://jmorken.github.io/20210505%20tree%20of%20composites/tree%\<br>
     20of%20composites%20page3%20-%20additional%20proportions.htm*)<br>
     <br>
+    <br>
+    <br>
+    (* fastest code, see:
+    https://mathematica.stackexchange.com/questions/301564/solving-a-system-of-equations-and-inequalities-with-5-variables/301569#301569
+    *)<br>
+    (*code for integer solutions*)<br>
+    FindInstance[(a/210)*0 + (b/210)*1 + (c/210)*2 + (d/210)*3 + (e/<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 210)*4 == 1/2 + 1/3 + 1/5
+    + 1/7 &amp;&amp; <br>
+    &nbsp;&nbsp; 0 &lt;= {a, b, c, d, e} &lt;= 210 &amp;&amp; a + b + c
+    + d + e == 210 &amp;&amp; <br>
+    &nbsp;&nbsp; d &lt;= e, {a, b, c, d, e}, Integers, 50000];<br>
+    Dimensions[%]<br>
+    <br>
+    <br>
+    (*code for real number solutions*)<br>
+    Reduce[(a/210)*0 + (b/210)*1 + (c/210)*2 + (d/210)*3 + (e/210)*4 ==
+    <br>
+    &nbsp;&nbsp; 1/2 + 1/3 + 1/5 + 1/7 &amp;&amp; 0 &lt;= {a, b, c, d,
+    e} &lt;= 210 &amp;&amp; <br>
+    &nbsp; a + b + c + d + e == 210 &amp;&amp; d &lt;= e, {a, b, c, d,
+    e}, Reals]<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    (*this below code is slow*)<br>
     Print["test to see how rare the a,b,c,d,e values are (there are \<br>
     multiple solutions to the equation)"]<br>
     <br>
