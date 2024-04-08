@@ -27,27 +27,35 @@
     for c in range(1, 100):<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+
     for d in range(1, 100):<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+
     e = x - a - b - c - d<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
     equation_rhs = np.sum(np.array([a, b, c, d, e]) / x * np.array([0,
     1, 2, 3, 4]))<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+
     if np.abs(equation_lhs - equation_rhs) &lt; tolerance:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
     trueListabcde.append((a, b, c, d, e))<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+
     trueCount += 1<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+
     else:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
     falseCount += 1<br>
     <br>
@@ -59,6 +67,161 @@
     print("falseCount:", falseCount)<br>
     print("Length(trueListabcde):", len(trueListabcde))<br>
     print("First 10 elements of trueListabcde:", trueListabcde[:10])<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    #fastest code using numba (longer code that checks more)<br>
+    #tally of all z/210 for different z, ie 247 for the actual prime
+    factor proportions<br>
+    <br>
+    import numpy as np<br>
+    from numba import njit<br>
+    import matplotlib.pyplot as plt<br>
+    <br>
+    # Given values<br>
+    x = 2 * 3 * 5 * 7<br>
+    y = 1/2 + 1/3 + 1/5 + 1/7<br>
+    equation_lhs = 247 / x<br>
+    tolerance = 1e-6<br>
+    z = 247 / 210<br>
+    threshold = 0.01&nbsp; # Adjust the threshold as needed<br>
+    <br>
+    @njit<br>
+    def check_values():<br>
+    &nbsp;&nbsp;&nbsp; trueCount = 0<br>
+    &nbsp;&nbsp;&nbsp; falseCount = 0<br>
+    &nbsp;&nbsp;&nbsp; trueListabcde = []<br>
+    &nbsp;&nbsp;&nbsp; value_list = []<br>
+    &nbsp;&nbsp;&nbsp; value_counts = {}<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; for a in range(1, 100):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for b in range(1, 100):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    for c in range(1, 100):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    for d in range(1, 100):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    e = x - a - b - c - d<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    equation_rhs = np.sum(np.array([a, b, c, d, e]) / x * np.array([0,
+    1, 2, 3, 4]))<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    value_list.append(equation_rhs)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    if np.abs(equation_lhs - equation_rhs) &lt; tolerance:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    trueListabcde.append((a, b, c, d, e))<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    trueCount += 1<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    falseCount += 1<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    if equation_rhs in value_counts:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    value_counts[equation_rhs] += 1<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    value_counts[equation_rhs] = 1<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; sorted_counts = sorted(value_counts.items(),
+    key=lambda x: x[1], reverse=True)<br>
+    &nbsp;&nbsp;&nbsp; top_10 = sorted_counts[:10]<br>
+    &nbsp;&nbsp;&nbsp; bottom_10 = sorted_counts[-10:]<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; # Multiply all values by 210<br>
+    &nbsp;&nbsp;&nbsp; multiplied_counts = [(value * 210, count) for
+    value, count in sorted_counts]<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; # Check how close the results are to being an
+    integer<br>
+    &nbsp;&nbsp;&nbsp; close_to_integer = [(value, count) for value,
+    count in multiplied_counts if np.abs(value - np.round(value)) &lt;
+    threshold]<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; return trueCount, falseCount, top_10, bottom_10,
+    close_to_integer<br>
+    <br>
+    trueCount, falseCount, top_10, bottom_10, close_to_integer =
+    check_values()<br>
+    <br>
+    print("trueCount:", trueCount)<br>
+    print("falseCount:", falseCount)<br>
+    print("Top 10 distinct values and their counts:")<br>
+    for value, count in top_10:<br>
+    &nbsp;&nbsp;&nbsp; print(f"{value}: {count}")<br>
+    <br>
+    print("\nBottom 10 distinct values and their counts:")<br>
+    for value, count in bottom_10:<br>
+    &nbsp;&nbsp;&nbsp; print(f"{value}: {count}")<br>
+    <br>
+    print("\nValues multiplied by 210 and close to being an integer:")<br>
+    for value, count in close_to_integer:<br>
+    &nbsp;&nbsp;&nbsp; print(f"{value}: {count}")<br>
+    <br>
+    # Assuming `close_to_integer` is a list of tuples containing values
+    and counts<br>
+    values = [value for value, _ in close_to_integer]<br>
+    sorted_values = sorted(values)<br>
+    sorted_values_rounded = [round(value) for value in sorted_values]<br>
+    <br>
+    # Tally the occurrence of each integer<br>
+    value_counts = {}<br>
+    for value in sorted_values_rounded:<br>
+    &nbsp;&nbsp;&nbsp; if value in value_counts:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value_counts[value] += 1<br>
+    &nbsp;&nbsp;&nbsp; else:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value_counts[value] = 1<br>
+    <br>
+    print("Sorted values multiplied by 210 and close to being an integer
+    (rounded to nearest integer):")<br>
+    for value in sorted_values_rounded:<br>
+    &nbsp;&nbsp;&nbsp; print(value)<br>
+    <br>
+    print("\nTally for each integer:")<br>
+    for value, count in value_counts.items():<br>
+    &nbsp;&nbsp;&nbsp; print(f"{value}: {count}")<br>
+    <br>
+    # Sort the value_counts dictionary by its values<br>
+    sorted_value_counts = sorted(value_counts.items(), key=lambda x:
+    x[1])<br>
+    <br>
+    print("\nTop 10 occurring values:")<br>
+    for value, count in sorted_value_counts[-10:]:<br>
+    &nbsp;&nbsp;&nbsp; print(f"{value}: {count}")<br>
+    <br>
+    print("\nBottom 10 occurring values:")<br>
+    for value, count in sorted_value_counts[:10]:<br>
+    &nbsp;&nbsp;&nbsp; print(f"{value}: {count}")<br>
+    <br>
+    print("\n10 largest values:")<br>
+    for value in sorted_values_rounded[-10:]:<br>
+    &nbsp;&nbsp;&nbsp; print(value)<br>
+    <br>
+    print("\n10 smallest values:")<br>
+    for value in sorted_values_rounded[:10]:<br>
+    &nbsp;&nbsp;&nbsp; print(value)<br>
+    <br>
+    # Sort the value_counts dictionary by its keys<br>
+    sorted_value_counts = sorted(value_counts.items())<br>
+    # Extract keys (values) and counts for plotting<br>
+    keys = [key for key, _ in sorted_value_counts]<br>
+    counts = [count for _, count in sorted_value_counts]<br>
+    # Create a bar graph<br>
+    plt.figure(figsize=(12, 6))<br>
+    plt.bar(keys, counts, color='skyblue')<br>
+    plt.xlabel('Integer Values')<br>
+    plt.ylabel('Counts')<br>
+    plt.title('Occurrence of Rounded Integer Values')<br>
+    plt.grid(axis='y', linestyle='--', alpha=0.7)<br>
+    plt.show()<br>
+    <br>
     <br>
     <br>
     <br>
@@ -86,19 +249,26 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     for d in range(1, 100):<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     e = x - a - b - c - d<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     equation_rhs = np.sum(np.array([a, b, c, d, e]) / x * np.array([0,
     1, 2, 3, 4]))<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     if np.abs(equation_lhs - equation_rhs) &lt; tolerance:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     trueListabcde.append((a, b, c, d, e))<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     trueCount += 1<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     else:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     falseCount += 1<br>
     <br>
     print("trueCount:", trueCount)<br>
@@ -133,21 +303,29 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     for d in range(1, 30):<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     e = x - a - b - c - d<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     equation_lhs = Rational(247, x)<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     equation_rhs = Rational(a, x)*0 + Rational(b, x)*1 + Rational(c,
     x)*2 + Rational(d, x)*3 + Rational(e, x)*4<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     if equation_lhs == equation_rhs == y:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     trueListabcde.append((a, b, c, d, e))<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     trueCount += 1<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     else:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     falseCount += 1<br>
     <br>
     print("trueCount:", trueCount)<br>
